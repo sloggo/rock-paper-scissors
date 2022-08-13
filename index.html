@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+</head>
+<body>
+    
+    <script>
+        let choices = ["Rock", "Paper", "Scissors"]
+
+        function getComputerChoice(choices){
+            return choices[Math.floor(Math.random() * 3)]
+        }
+
+        function getPlayerChoice(choices){
+            return prompt("Enter Rock Paper or Scissors:")
+        }
+
+        let computerSelection = getComputerChoice(choices)
+        console.log("Com choice: " + computerSelection)
+
+        let playerSelection = getPlayerChoice(choices)
+        console.log("Plyr choice: " + playerSelection)
+
+    </script>
+
+</body>
+</html>
