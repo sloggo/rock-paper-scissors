@@ -1,0 +1,33 @@
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    background-color: #F0F0F0;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #33396f;
+    color: #F0F0F0;
+    padding: 20px 30px;
+}
+
+#maintitle > .header{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.nav{
+    margin-left: auto;
+    font-size: 32px;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+a.navitem{
+    color: #F0F0F0;
+    text-decoration: none;
+}
