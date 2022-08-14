@@ -11,7 +11,8 @@ body{
     align-items: center;
     background-color: #33396f;
     color: #F0F0F0;
-    padding: 20px 30px;
+    padding: 20px 20px;
+    box-shadow: 0px 0px  20px #dbdbdb;
 }
 
 #maintitle > .header{
@@ -30,4 +31,73 @@ body{
 a.navitem{
     color: #F0F0F0;
     text-decoration: none;
+}
+
+.buttons{
+    border-radius: 15px;
+    background-color: #c9c9c9;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    box-shadow: 0px 0px  20px #dbdbdb;
+    padding: 150px 150px;
+}
+
+.options{
+    padding: 25px;
+    font-size: 40px;
+}
+
+.statusbar{
+    display: flex;
+    padding: 10px 50px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #974443;
+    border-radius: 15px;
+    box-shadow: 0px 0px  20px #dbdbdb;
+    color: #F0F0F0;
+    font-size: 18px;
+    box-shadow: 0px 0px  20px #dbdbdb;
+}
+
+.currentmoves{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    font-size: 36px;
+}
+
+.movecontainer{
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonsandstatus{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.winloss{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.footer{
+    background-color: #33396F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    margin-bottom: auto;
+    box-shadow: 0px 0px  20px #dbdbdb;
+    color: #F0F0F0;
+    margin-top: 75px;
 }

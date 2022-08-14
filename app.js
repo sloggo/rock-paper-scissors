@@ -1,4 +1,7 @@
-let choices = ["rock", "paper", "scissors"]
+let choices = ["Rock", "Paper", "Scissors"]
+
+let playerScore = 0;
+let computerScore = 0;
 
 function createOutput(text) {
     let textline = document.createElement('p');
@@ -15,15 +18,22 @@ function getPlayerChoice(choices) {
 }
 
 function playRound(playerSelection, computerSelection) {
-    createOutput('Computer: ' + computerSelection + ' Player: ' + playerSelection)
     if (playerSelection === computerSelection) {
-        createOutput('draw')
+        winLoss.textContent = 'Draw!'
+        playerScoreText.textContent = playerScore;
+        computerScoreText.textContent = computerScore;
         return 'draw';
-    } else if ((playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
-        createOutput('win')
+    } else if ((playerSelection === 'Paper' && computerSelection === 'Rock') || (playerSelection === 'Rock' && computerSelection === 'Scissors') || (playerSelection === 'Scissors' && computerSelection === 'Paper')) {
+        winLoss.textContent = 'You Win!'
+        playerScore++
+        playerScoreText.textContent = playerScore;
+        computerScoreText.textContent = computerScore;
         return 'win';
     } else {
-        createOutput('lose')
+        winLoss.textContent = 'You Lose!'
+        computerScore++
+        playerScoreText.textContent = playerScore;
+        computerScoreText.textContent = computerScore;
         return 'lose';
     }
 }
@@ -73,10 +83,22 @@ const buttons = document.querySelectorAll('button');
 console.log(buttons)
 const outputDiv = document.querySelector('.content');
 
+const playerMoveCurrent = document.querySelector("#playermovecurrent")
+const computerMoveCurrent = document.querySelector("#computermovecurrent")
+const winLoss = document.querySelector(".winloss")
+
+const playerScoreText = document.querySelector("#playerscore")
+const computerScoreText = document.querySelector("#computerscore")
+
 buttons.forEach((button) => {
 
     button.addEventListener('click', () => {
-        let computerSelection
-        playRound(button.id, getComputerChoice(choices));
+        let computerCurrentChoice = getComputerChoice(choices)
+        playerMoveCurrent.textContent = button.id
+        computerMoveCurrent.textContent = computerCurrentChoice
+        playRound(button.id, computerCurrentChoice);
     });
 });
+
+playerScoreText.textContent = playerScore;
+computerScoreText.textContent = computerScore;
